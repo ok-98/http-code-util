@@ -1,0 +1,25 @@
+{
+  "name": "http-code-util",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/counter.umd.cjs",
+  "module": "./dist/http-code-util.js",
+  "types": "./dist/http-code-util.d.ts",
+  "exports": {
+    "types": "./http-code-util.d.ts",
+    "import": "./dist/http-code-util.js",
+    "require": "./dist/http-code-util.umd.cjs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10"
+  }
+}

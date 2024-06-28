@@ -1,0 +1,185 @@
+import { StatusCodeInfo } from "../types/types.js";
+import { 
+    HTTP_400_CODE, HTTP_400_DESCRIPTION, HTTP_400_NAME, 
+    HTTP_401_CODE, HTTP_401_DESCRIPTION, HTTP_401_NAME, 
+    HTTP_402_CODE, HTTP_402_DESCRIPTION, HTTP_402_NAME, 
+    HTTP_403_CODE, HTTP_403_DESCRIPTION, HTTP_403_NAME, 
+    HTTP_404_CODE, HTTP_404_DESCRIPTION, HTTP_404_NAME, 
+    HTTP_405_CODE, HTTP_405_DESCRIPTION, HTTP_405_NAME, 
+    HTTP_406_CODE, HTTP_406_DESCRIPTION, HTTP_406_NAME, 
+    HTTP_407_CODE, HTTP_407_DESCRIPTION, HTTP_407_NAME, 
+    HTTP_408_CODE, HTTP_408_DESCRIPTION, HTTP_408_NAME, 
+    HTTP_409_CODE, HTTP_409_DESCRIPTION, HTTP_409_NAME, 
+    HTTP_410_CODE, HTTP_410_DESCRIPTION, HTTP_410_NAME, 
+    HTTP_411_CODE, HTTP_411_DESCRIPTION, HTTP_411_NAME, 
+    HTTP_412_CODE, HTTP_412_DESCRIPTION, HTTP_412_NAME, 
+    HTTP_413_CODE, HTTP_413_DESCRIPTION, HTTP_413_NAME, 
+    HTTP_414_CODE, HTTP_414_DESCRIPTION, HTTP_414_NAME, 
+    HTTP_415_CODE, HTTP_415_DESCRIPTION, HTTP_415_NAME, 
+    HTTP_416_CODE, HTTP_416_DESCRIPTION, HTTP_416_NAME, 
+    HTTP_417_CODE, HTTP_417_DESCRIPTION, HTTP_417_NAME, 
+    HTTP_418_CODE, HTTP_418_DESCRIPTION, HTTP_418_NAME, 
+    HTTP_421_CODE, HTTP_421_DESCRIPTION, HTTP_421_NAME, 
+    HTTP_422_CODE, HTTP_422_DESCRIPTION, HTTP_422_NAME, 
+    HTTP_423_CODE, HTTP_423_DESCRIPTION, HTTP_423_NAME, 
+    HTTP_424_CODE, HTTP_424_DESCRIPTION, HTTP_424_NAME, 
+    HTTP_425_CODE, HTTP_425_DESCRIPTION, HTTP_425_NAME, 
+    HTTP_426_CODE, HTTP_426_DESCRIPTION, HTTP_426_NAME, 
+    HTTP_428_CODE, HTTP_428_DESCRIPTION, HTTP_428_NAME, 
+    HTTP_429_CODE, HTTP_429_DESCRIPTION, HTTP_429_NAME, 
+    HTTP_431_CODE, HTTP_431_DESCRIPTION, HTTP_431_NAME, 
+    HTTP_444_CODE, HTTP_444_DESCRIPTION, HTTP_444_NAME, 
+    HTTP_449_CODE, HTTP_449_DESCRIPTION, HTTP_449_NAME, 
+    HTTP_450_CODE, HTTP_450_DESCRIPTION, HTTP_450_NAME, 
+    HTTP_451_CODE, HTTP_451_DESCRIPTION, HTTP_451_NAME, 
+    HTTP_499_CODE, HTTP_499_DESCRIPTION, HTTP_499_NAME 
+} from "./4XX-constants.js";
+
+export const HTTP_4XX_CODES = [
+    HTTP_400_CODE, HTTP_401_CODE, HTTP_402_CODE, HTTP_403_CODE, 
+    HTTP_404_CODE, HTTP_405_CODE, HTTP_406_CODE, HTTP_407_CODE, 
+    HTTP_408_CODE, HTTP_409_CODE, HTTP_410_CODE, HTTP_411_CODE, 
+    HTTP_412_CODE, HTTP_413_CODE, HTTP_414_CODE, HTTP_415_CODE, 
+    HTTP_416_CODE, HTTP_417_CODE, HTTP_418_CODE, HTTP_421_CODE, 
+    HTTP_422_CODE, HTTP_423_CODE, HTTP_424_CODE, HTTP_425_CODE, 
+    HTTP_426_CODE, HTTP_428_CODE, HTTP_429_CODE, HTTP_431_CODE, 
+    HTTP_444_CODE, HTTP_449_CODE, HTTP_450_CODE, HTTP_451_CODE, 
+    HTTP_499_CODE
+] as const satisfies number[];
+
+export type HTTP_4XX_TYPE = typeof HTTP_4XX_CODES[number];
+
+export const HTTP_4XX_RECORD: Record<HTTP_4XX_TYPE, StatusCodeInfo> = {
+    [HTTP_400_CODE]: {
+        name: HTTP_400_NAME,
+        description: HTTP_400_DESCRIPTION,
+    },
+    [HTTP_401_CODE]: {
+        name: HTTP_401_NAME,
+        description: HTTP_401_DESCRIPTION,
+    },
+    [HTTP_402_CODE]: {
+        name: HTTP_402_NAME,
+        description: HTTP_402_DESCRIPTION,
+    },
+    [HTTP_403_CODE]: {
+        name: HTTP_403_NAME,
+        description: HTTP_403_DESCRIPTION,
+    },
+    [HTTP_404_CODE]: {
+        name: HTTP_404_NAME,
+        description: HTTP_404_DESCRIPTION,
+    },
+    [HTTP_405_CODE]: {
+        name: HTTP_405_NAME,
+        description: HTTP_405_DESCRIPTION,
+    },
+    [HTTP_406_CODE]: {
+        name: HTTP_406_NAME,
+        description: HTTP_406_DESCRIPTION,
+    },
+    [HTTP_407_CODE]: {
+        name: HTTP_407_NAME,
+        description: HTTP_407_DESCRIPTION,
+    },
+    [HTTP_408_CODE]: {
+        name: HTTP_408_NAME,
+        description: HTTP_408_DESCRIPTION,
+    },
+    [HTTP_409_CODE]: {
+        name: HTTP_409_NAME,
+        description: HTTP_409_DESCRIPTION,
+    },
+    [HTTP_410_CODE]: {
+        name: HTTP_410_NAME,
+        description: HTTP_410_DESCRIPTION,
+    },
+    [HTTP_411_CODE]: {
+        name: HTTP_411_NAME,
+        description: HTTP_411_DESCRIPTION,
+    },
+    [HTTP_412_CODE]: {
+        name: HTTP_412_NAME,
+        description: HTTP_412_DESCRIPTION,
+    },
+    [HTTP_413_CODE]: {
+        name: HTTP_413_NAME,
+        description: HTTP_413_DESCRIPTION,
+    },
+    [HTTP_414_CODE]: {
+        name: HTTP_414_NAME,
+        description: HTTP_414_DESCRIPTION,
+    },
+    [HTTP_415_CODE]: {
+        name: HTTP_415_NAME,
+        description: HTTP_415_DESCRIPTION,
+    },
+    [HTTP_416_CODE]: {
+        name: HTTP_416_NAME,
+        description: HTTP_416_DESCRIPTION,
+    },
+    [HTTP_417_CODE]: {
+        name: HTTP_417_NAME,
+        description: HTTP_417_DESCRIPTION,
+    },
+    [HTTP_418_CODE]: {
+        name: HTTP_418_NAME,
+        description: HTTP_418_DESCRIPTION,
+    },
+    [HTTP_421_CODE]: {
+        name: HTTP_421_NAME,
+        description: HTTP_421_DESCRIPTION,
+    },
+    [HTTP_422_CODE]: {
+        name: HTTP_422_NAME,
+        description: HTTP_422_DESCRIPTION,
+    },
+    [HTTP_423_CODE]: {
+        name: HTTP_423_NAME,
+        description: HTTP_423_DESCRIPTION,
+    },
+    [HTTP_424_CODE]: {
+        name: HTTP_424_NAME,
+        description: HTTP_424_DESCRIPTION,
+    },
+    [HTTP_425_CODE]: {
+        name: HTTP_425_NAME,
+        description: HTTP_425_DESCRIPTION,
+    },
+    [HTTP_426_CODE]: {
+        name: HTTP_426_NAME,
+        description: HTTP_426_DESCRIPTION,
+    },
+    [HTTP_428_CODE]: {
+        name: HTTP_428_NAME,
+        description: HTTP_428_DESCRIPTION,
+    },
+    [HTTP_429_CODE]: {
+        name: HTTP_429_NAME,
+        description: HTTP_429_DESCRIPTION,
+    },
+    [HTTP_431_CODE]: {
+        name: HTTP_431_NAME,
+        description: HTTP_431_DESCRIPTION,
+    },
+    [HTTP_444_CODE]: {
+        name: HTTP_444_NAME,
+        description: HTTP_444_DESCRIPTION,
+    },
+    [HTTP_449_CODE]: {
+        name: HTTP_449_NAME,
+        description: HTTP_449_DESCRIPTION,
+    },
+    [HTTP_450_CODE]: {
+        name: HTTP_450_NAME,
+        description: HTTP_450_DESCRIPTION,
+    },
+    [HTTP_451_CODE]: {
+        name: HTTP_451_NAME,
+        description: HTTP_451_DESCRIPTION,
+    },
+    [HTTP_499_CODE]: {
+        name: HTTP_499_NAME,
+        description: HTTP_499_DESCRIPTION,
+    }
+} as const;
