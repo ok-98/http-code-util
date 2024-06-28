@@ -11,12 +11,22 @@ import {
     HTTP_308_CODE, HTTP_308_DESCRIPTION, HTTP_308_NAME 
 } from "./3XX-constants.js";
 
+/**
+ * Array of HTTP 3XX status codes.
+ * @type {HTTP_3XX_CODE_TYPE[]}
+ */
 export const HTTP_3XX_CODES = [
     HTTP_300_CODE, HTTP_301_CODE, HTTP_302_CODE, HTTP_303_CODE, 
     HTTP_304_CODE, HTTP_305_CODE, HTTP_306_CODE, HTTP_307_CODE, 
     HTTP_308_CODE
 ] as const satisfies number[];
 
+/**
+ * Array of HTTP 3XX status code names.
+ * @type {HTTP_3XX_NAME_TYPE[]}
+ * @remarks
+ * The array contains the names of HTTP status codes in the 3XX range.
+ */
 export const HTTP_3XX_NAMES = [
     HTTP_300_NAME,
      HTTP_301_NAME,
@@ -29,11 +39,21 @@ export const HTTP_3XX_NAMES = [
     HTTP_308_NAME
 ] as const satisfies string[];
 
-export type HTTP_3XX_TYPE = typeof HTTP_3XX_CODES[number];
+/**
+ * Represents the type of HTTP 3XX status codes.
+ */
+export type HTTP_3XX_CODE_TYPE = typeof HTTP_3XX_CODES[number];
+/**
+ * Represents the type of HTTP 3XX status code names.
+ */
 export type HTTP_3XX_NAME_TYPE = typeof HTTP_3XX_NAMES[number];
 
 
-const HTTP_3XX_CODE_RECORD: Record<HTTP_3XX_TYPE, StatusCodeInfo> = {
+/**
+ * HTTP 3XX Code Record.
+ * Represents a record of HTTP 3XX status codes and their corresponding information.
+ */
+const HTTP_3XX_CODE_RECORD: Record<HTTP_3XX_CODE_TYPE, StatusCodeInfo> = {
     [HTTP_300_CODE]: {
         code: HTTP_300_CODE,
         name: HTTP_300_NAME,
@@ -81,6 +101,10 @@ const HTTP_3XX_CODE_RECORD: Record<HTTP_3XX_TYPE, StatusCodeInfo> = {
     }
 } as const;
 
+/**
+ * HTTP 3XX Name Record.
+ * Represents a record of HTTP 3XX status code names and their corresponding StatusCodeInfo objects.
+ */
 const HTTP_3XX_NAME_RECORD: Record<HTTP_3XX_NAME_TYPE, StatusCodeInfo> = {
     [HTTP_300_NAME]: HTTP_3XX_CODE_RECORD[HTTP_300_CODE],
     [HTTP_301_NAME]: HTTP_3XX_CODE_RECORD[HTTP_301_CODE],
@@ -93,4 +117,8 @@ const HTTP_3XX_NAME_RECORD: Record<HTTP_3XX_NAME_TYPE, StatusCodeInfo> = {
     [HTTP_308_NAME]: HTTP_3XX_CODE_RECORD[HTTP_308_CODE]
 } as const
 
+/**
+ * HTTP 3XX record.
+ * This record combines the HTTP 3XX code record and the HTTP 3XX name record.
+ */
 export const HTTP_3XX_RECORD = {...HTTP_3XX_CODE_RECORD, ...HTTP_3XX_NAME_RECORD} as const;
