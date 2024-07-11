@@ -1,7 +1,7 @@
 {
   "name": "http-code-util",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "license": "MIT",
   "sideEffects": false,
@@ -42,12 +42,12 @@
     "treecheck": "pnpm build && agadoo dist/http-code-util.js",
     "cs": "pnpm changeset",
     "cs:version": "pnpm cs version",
-    "release": "pnpm build && pnpm gen:docs && pnpm cs publish"
+    "release": "pnpm build && pnpm cs publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
-    "@typescript-eslint/eslint-plugin": "^7.7.0",
-    "@typescript-eslint/parser": "^7.7.0",
+    "@changesets/cli": "^2.27.7",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
     "@vitest/coverage-v8": "^1.5.0",
     "agadoo": "^3.0.0",
     "eslint": "8.57.0",
@@ -60,8 +60,8 @@
     "prettier": "^3.2.5",
     "prettier-eslint": "^16.3.0",
     "pretty-quick": "^4.0.0",
-    "typescript": "^5.4.5",
-    "vite": "^5.3.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3",
     "vite-plugin-dts": "^3.8.3",
     "vitest": "^1.5.0"
   },
