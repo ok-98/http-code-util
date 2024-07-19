@@ -1,3 +1,5 @@
+import { StatusCodeInfo } from '../http-code-util.ts';
+
 //#region "500"
 /**
  * Represents the HTTP status code 500.
@@ -13,6 +15,15 @@ export const HTTP_500_NAME = 'Internal Server Error';
  */
 export const HTTP_500_DESCRIPTION =
   "The server has encountered a situation it doesn't know how to handle.";
+
+/**
+ * Represents the HTTP 500 Internal Server Error status code.
+ */
+export const HTTP_500: StatusCodeInfo = {
+  code: HTTP_500_CODE,
+  name: HTTP_500_NAME,
+  description: HTTP_500_DESCRIPTION,
+};
 //#endregion "500"
 
 //#region "501"
@@ -30,6 +41,15 @@ export const HTTP_501_NAME = 'Not Implemented';
  */
 export const HTTP_501_DESCRIPTION =
   'The request method is not supported by the server and cannot be handled.';
+
+/**
+ * Represents the HTTP 501 Not Implemented status code.
+ */
+export const HTTP_501: StatusCodeInfo = {
+  code: HTTP_501_CODE,
+  name: HTTP_501_NAME,
+  description: HTTP_501_DESCRIPTION,
+};
 //#endregion "501"
 
 //#region "502"
@@ -48,6 +68,15 @@ export const HTTP_502_NAME = 'Bad Gateway';
  */
 export const HTTP_502_DESCRIPTION =
   'The server, while acting as a gateway or proxy, received an invalid response from the upstream server.';
+
+/**
+ * Represents the HTTP 502 Bad Gateway status code.
+ */
+export const HTTP_502: StatusCodeInfo = {
+  code: HTTP_502_CODE,
+  name: HTTP_502_NAME,
+  description: HTTP_502_DESCRIPTION,
+};
 //#endregion "502"
 
 //#region "503"
@@ -65,6 +94,15 @@ export const HTTP_503_NAME = 'Service Unavailable';
  */
 export const HTTP_503_DESCRIPTION =
   'The server is not ready to handle the request.';
+
+/**
+ * Represents the HTTP 503 Service Unavailable status code.
+ */
+export const HTTP_503: StatusCodeInfo = {
+  code: HTTP_503_CODE,
+  name: HTTP_503_NAME,
+  description: HTTP_503_DESCRIPTION,
+};
 //#endregion "503"
 
 //#region "504"
@@ -83,6 +121,15 @@ export const HTTP_504_NAME = 'Gateway Timeout';
  */
 export const HTTP_504_DESCRIPTION =
   'The server, while acting as a gateway or proxy, did not get a response in time from the upstream server.';
+
+/**
+ * Represents the HTTP 504 Gateway Timeout status code.
+ */
+export const HTTP_504: StatusCodeInfo = {
+  code: HTTP_504_CODE,
+  name: HTTP_504_NAME,
+  description: HTTP_504_DESCRIPTION,
+};
 //#endregion "504"
 
 //#region "505"
@@ -101,6 +148,15 @@ export const HTTP_505_NAME = 'HTTP Version Not Supported';
  */
 export const HTTP_505_DESCRIPTION =
   'The HTTP version used in the request is not supported by the server.';
+
+/**
+ * Represents the HTTP 505 HTTP Version Not Supported status code.
+ */
+export const HTTP_505: StatusCodeInfo = {
+  code: HTTP_505_CODE,
+  name: HTTP_505_NAME,
+  description: HTTP_505_DESCRIPTION,
+};
 //#endregion "505"
 
 //#region "506"
@@ -119,6 +175,15 @@ export const HTTP_506_NAME = 'Variant Also Negotiates';
  */
 export const HTTP_506_DESCRIPTION =
   'The server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself, and is therefore not a proper end point in the negotiation process.';
+
+/**
+ * Represents the HTTP 506 Variant Also Negotiates status code.
+ */
+export const HTTP_506: StatusCodeInfo = {
+  code: HTTP_506_CODE,
+  name: HTTP_506_NAME,
+  description: HTTP_506_DESCRIPTION,
+};
 //#endregion "506"
 
 //#region "507"
@@ -138,6 +203,15 @@ export const HTTP_507_NAME = 'Insufficient Storage';
  */
 export const HTTP_507_DESCRIPTION =
   '(WebDAV) The server is unable to store the representation needed to complete the request.';
+
+/**
+ * Represents the HTTP 507 Insufficient Storage status code.
+ */
+export const HTTP_507: StatusCodeInfo = {
+  code: HTTP_507_CODE,
+  name: HTTP_507_NAME,
+  description: HTTP_507_DESCRIPTION,
+};
 //#endregion "507"
 
 //#region "508"
@@ -157,6 +231,15 @@ export const HTTP_508_NAME = 'Loop Detected';
  */
 export const HTTP_508_DESCRIPTION =
   '(WebDAV) The server detected an infinite loop while processing the request.';
+
+/**
+ * Represents the HTTP 508 Loop Detected status code.
+ */
+export const HTTP_508: StatusCodeInfo = {
+  code: HTTP_508_CODE,
+  name: HTTP_508_NAME,
+  description: HTTP_508_DESCRIPTION,
+};
 //#endregion "508"
 
 //#region "510"
@@ -174,6 +257,15 @@ export const HTTP_510_NAME = 'Not Extended';
  */
 export const HTTP_510_DESCRIPTION =
   'Further extensions to the request are required for the server to fulfill it.';
+
+/**
+ * Represents the HTTP 510 Not Extended status code.
+ */
+export const HTTP_510: StatusCodeInfo = {
+  code: HTTP_510_CODE,
+  name: HTTP_510_NAME,
+  description: HTTP_510_DESCRIPTION,
+};
 //#endregion "510"
 
 //#region "511"
@@ -190,6 +282,15 @@ export const HTTP_511_NAME = 'Network Authentication Required';
  */
 export const HTTP_511_DESCRIPTION =
   'The client needs to authenticate to gain network access.';
+
+/**
+ * Represents the HTTP 511 Network Authentication Required status code.
+ */
+export const HTTP_511: StatusCodeInfo = {
+  code: HTTP_511_CODE,
+  name: HTTP_511_NAME,
+  description: HTTP_511_DESCRIPTION,
+};
 //#endregion "511"
 
 //#region "599"
@@ -206,4 +307,13 @@ export const HTTP_599_NAME = 'Network Connect Timeout Error';
  * The network connection has timed out.
  */
 export const HTTP_599_DESCRIPTION = 'The network connection has timed out.';
+
+/**
+ * Represents the HTTP 599 Network Connect Timeout Error status code.
+ */
+export const HTTP_599: StatusCodeInfo = {
+  code: HTTP_599_CODE,
+  name: HTTP_599_NAME,
+  description: HTTP_599_DESCRIPTION,
+};
 //#endregion "599"

@@ -1,7 +1,7 @@
 {
   "name": "http-code-util",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.2.1",
   "type": "module",
   "license": "MIT",
   "sideEffects": false,
@@ -42,7 +42,8 @@
     "treecheck": "pnpm build && agadoo dist/http-code-util.js",
     "cs": "pnpm changeset",
     "cs:version": "pnpm cs version",
-    "release": "pnpm build && pnpm cs publish"
+    "release": "pnpm build && pnpm cs publish",
+    "table": "node  ./tooling/gen-table.js"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.7",

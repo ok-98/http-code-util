@@ -4,7 +4,11 @@ export {
   HTTP_1XX_RECORD as HttpStatus1XX,
   HTTP_1XX_CODES as HttpStatusCodes1XX,
 } from './1XX.js';
-import { StatusCodeInfo } from '../types/types.ts';
+import {
+  HttpStatusCode,
+  HttpStatusName,
+  StatusCodeInfo,
+} from '../types/types.ts';
 import { HTTP_1XX_CODES, HTTP_1XX_NAMES, HTTP_1XX_RECORD } from './1XX.js';
 import { HTTP_2XX_CODES, HTTP_2XX_NAMES, HTTP_2XX_RECORD } from './2XX.js';
 import { HTTP_3XX_CODES, HTTP_3XX_NAMES, HTTP_3XX_RECORD } from './3XX.js';
@@ -47,6 +51,8 @@ export {
 //#region XXX
 /**
  * Represents the HTTP status codes and their corresponding information.
+ *
+ * 🍃 impacts tree-shaking of this module a lot! only use when really needed!
  */
 export const HttpStatus = {
   ...HTTP_1XX_RECORD,
@@ -54,12 +60,18 @@ export const HttpStatus = {
   ...HTTP_3XX_RECORD,
   ...HTTP_4XX_RECORD,
   ...HTTP_5XX_RECORD,
-} as const satisfies Record<number | string, StatusCodeInfo>;
+} as const satisfies Record<
+  number | string | HttpStatusCode | HttpStatusName,
+  StatusCodeInfo
+> as Record<number | string | HttpStatusCode | HttpStatusName, StatusCodeInfo>;
 /**
  * Array containing all the HTTP status codes.
+ *
+ * 🍃 impacts tree-shaking of this module a lot! only use when really needed!
+ *
  * @type {readonly number[]}
  */
-export const HttpStatusCodes = [
+export const httpStatusCodes = [
   ...HTTP_1XX_CODES,
   ...HTTP_2XX_CODES,
   ...HTTP_3XX_CODES,
@@ -69,10 +81,14 @@ export const HttpStatusCodes = [
 
 /**
  * Array containing all the HTTP status names.
+ *
+ * 🍃 impacts tree-shaking of this module a lot! only use when really needed!
+ *
+ * @remarks
  * The array is a concatenation of HTTP_1XX_NAMES, HTTP_2XX_NAMES, HTTP_3XX_NAMES,
  * HTTP_4XX_NAMES, and HTTP_5XX_NAMES.
  */
-export const HttpStatusNames = [
+export const httpStatusNames = [
   ...HTTP_1XX_NAMES,
   ...HTTP_2XX_NAMES,
   ...HTTP_3XX_NAMES,
@@ -81,6 +97,8 @@ export const HttpStatusNames = [
 ] as const satisfies string[];
 /**
  * HTTP status codes grouped by their respective categories.
+ *
+ * 🍃 impacts tree-shaking of this module a lot! only use when really needed!
  *
  * @remarks
  * This object contains the HTTP status codes categorized into 1XX, 2XX, 3XX, 4XX, and 5XX.
@@ -108,6 +126,8 @@ export const HttpStatusXXX = {
 /**
  * HTTP status codes grouped by their respective categories.
  *
+ * 🍃 impacts tree-shaking of this module a lot! only use when really needed!
+ *
  * @remarks
  * This object contains the HTTP status codes categorized into 1XX, 2XX, 3XX, 4XX, and 5XX.
  * Each category is represented by an array of numbers.
@@ -121,6 +141,8 @@ export const HttpStatusCodesXXX = {
 } as const satisfies Record<string, number[]>;
 /**
  * A mapping of HTTP status code ranges to their corresponding status code names.
+ *
+ * 🍃 impacts tree-shaking of this module a lot! only use when really needed!
  */
 export const HttpStatusNamesXXX = {
   '1XX': HTTP_1XX_NAMES,
@@ -130,3 +152,5 @@ export const HttpStatusNamesXXX = {
   '5XX': HTTP_5XX_NAMES,
 } as const satisfies Record<string, string[]>;
 //#endregion XXX
+
+export * from './contants.ts';

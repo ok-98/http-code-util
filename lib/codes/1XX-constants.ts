@@ -72,6 +72,12 @@ export const HTTP_102_DESCRIPTION =
   '(WebDAV) The server has received and is processing the request, but no response is available yet.';
 //#endregion "102"
 
+export const HTTP_102: StatusCodeInfo = {
+  code: HTTP_102_CODE,
+  name: HTTP_102_NAME,
+  description: HTTP_102_DESCRIPTION,
+};
+
 //#region "103"
 /**
  * HTTP status code 103.
@@ -87,4 +93,10 @@ export const HTTP_103_NAME = 'Early Hints';
  */
 export const HTTP_103_DESCRIPTION =
   'Used to return some response headers before final HTTP message.';
+
+export const HTTP_103: StatusCodeInfo = {
+  code: HTTP_103_CODE,
+  name: HTTP_103_NAME,
+  description: HTTP_103_DESCRIPTION,
+};
 //#endregion "103"
