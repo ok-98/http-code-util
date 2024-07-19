@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
@@ -6,6 +6,8 @@ export default defineConfig({
     dts({
       include: ['lib'],
       exclude: ['**/*.test.ts', 'lib/tsdoc.ts'],
+      rollupTypes: true,
+      rollupConfig: { bundledPackages: ['only-utils'] },
     }),
   ],
   build: {
@@ -13,5 +15,5 @@ export default defineConfig({
       entry: './lib/http-code-util.ts',
       name: 'http-code-util',
     },
-  }
-})
+  },
+});
