@@ -25,6 +25,9 @@ export type HttpStatusCode = Prettify<
   | HTTP_5XX_CODE_TYPE
 >;
 
+/**
+ * Represents an HTTP status name.
+ */
 export type HttpStatusName = Prettify<
   | HTTP_1XX_NAME_TYPE
   | HTTP_2XX_NAME_TYPE

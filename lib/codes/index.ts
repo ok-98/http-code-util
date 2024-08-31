@@ -153,4 +153,4 @@ export const HttpStatusNamesXXX = {
 } as const satisfies Record<string, string[]>;
 //#endregion XXX
 
-export * from './contants.ts';
+export * from './constants/index.ts';
